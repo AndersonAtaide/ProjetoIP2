@@ -1,11 +1,8 @@
-package data;
+package control;
 
 import model.Funcionario;
-import model.Usuario;
 
-public interface IRepositorioDeFuncionarios {
-	
-	
+public interface ICadastroDeFuncionarios {
 	
 	void incluirFuncionario(Funcionario funci);
 	void procurarFuncionario (int matricula);

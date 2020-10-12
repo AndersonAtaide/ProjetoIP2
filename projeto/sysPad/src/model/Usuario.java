@@ -49,8 +49,4 @@ public abstract class Usuario {
 		return "nome=" + nome + ", sobrenome=" + sobrenome + ", cpf=" + cpf + ", telefone=" + telefone;
 	}
 	
-	
-	
-	
-	
 }

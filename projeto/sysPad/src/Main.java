@@ -1,8 +1,7 @@
 import control.CadastroDeFuncionarios;
+import control.ICadastroDeFuncionarios;
 import data.IRepositorioDeFuncionarios;
-import model.Administrador;
 import model.Funcionario;
-import model.Usuario;
 
 public class Main {
 
@@ -15,7 +14,7 @@ public class Main {
 		
 		
 		IRepositorioDeFuncionarios repositorioDeFuncionarios = new data.repositorioDeFuncionarios(100);
-		CadastroDeFuncionarios cadastrarFuncionario = new CadastroDeFuncionarios(repositorioDeFuncionarios);
+		ICadastroDeFuncionarios cadastrarFuncionario = new CadastroDeFuncionarios(repositorioDeFuncionarios);
 		
 		cadastrarFuncionario.incluirFuncionario(novoFuncionario);
 		repositorioDeFuncionarios.incluirFuncionario(novoGerente);
@@ -44,12 +43,16 @@ public class Main {
 		
 		repositorioDeFuncionarios.listarFuncionarios();
 		
-		
+		System.out.println();
 
-		
-		
+		System.out.println();
 
+		Funcionario novoFuncionario4 = new Funcionario("carlos", "cavalcanti", "05515905482", 3597415, false, "fabion", "fbnascimento");
 		
+		
+		cadastrarFuncionario.incluirFuncionario(novoFuncionario4);
+
+
 	}
 
 }

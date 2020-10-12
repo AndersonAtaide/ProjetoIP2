@@ -29,9 +29,13 @@ public class repositorioDeFuncionarios implements IRepositorioDeFuncionarios{
 
 	public void incluirFuncionario(Funcionario funci) {
 		while (funcionarios[this.posicao] != null) {
+			if(funcionarios[posicao].getMatricula() == funci.getMatricula()) {
+				System.out.println("Funcionario Já existe");
+				break;
+			}
 			posicao += 1;
 		}
-		this.funcionarios[posicao] = (Funcionario)funci;
+		this.funcionarios[posicao] = funci;
 	}
 	public void procurarFuncionario (int matricula) {
 		for (Funcionario funcionario : funcionarios) {
